@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import os
+import webserver
 import logging
 from datetime import datetime, timezone
 from bot.donation_tracker import DonationTracker
@@ -95,5 +96,5 @@ if __name__ == "__main__":
     if not token:
         logger.error("DISCORD_BOT_TOKEN environment variable not set!")
         exit(1)
-    
+    webserver.keep_alive()
     bot.run(DISCORD_BOT_TOKEN)

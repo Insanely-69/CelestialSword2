@@ -96,4 +96,4 @@ if __name__ == "__main__":
         logger.error("DISCORD_BOT_TOKEN environment variable not set!")
         exit(1)
     
-    bot.run(token)
+    bot.run(DISCORD_BOT_TOKEN)

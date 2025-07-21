@@ -86,10 +86,6 @@ async def on_command_error(ctx, error):
         await ctx.send("❌ You don't have permission to use this command.")
     elif isinstance(error, commands.CommandNotFound):
         pass  # Ignore unknown commands
- # ADD THE NEW RATE LIMIT HANDLING HERE ▼
-    elif isinstance(error, discord.HTTPException) and error.status == 429:
-        await ctx.send("⚠️ Bot is being rate limited. Please wait a moment...")
-        logger.warning(f"Rate limited: {error}")
     else:
         logger.error(f"Command error: {error}")
         await ctx.send("❌ An error occurred while processing the command.")

@@ -97,4 +97,4 @@ if __name__ == "__main__":
         logger.error("DISCORD_BOT_TOKEN environment variable not set!")
         exit(1)
     webserver.kepp_alive()  # Correct typo
-    bot.run(DISCORD_BOT_TOKEN)
+    bot.run(token)

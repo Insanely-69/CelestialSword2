@@ -96,5 +96,5 @@ if __name__ == "__main__":
     if not token:
         logger.error("DISCORD_BOT_TOKEN environment variable not set!")
         exit(1)
-    webserver.keep_alive()
+    webserver.webserver.kepp_alive()  # Correct typo
     bot.run(DISCORD_BOT_TOKEN)
